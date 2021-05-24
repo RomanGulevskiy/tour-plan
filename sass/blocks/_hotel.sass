@@ -31,6 +31,45 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+  &-slider
+    width: 728px
+    height: 450px
+    position: relative
+    &__button
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 30px
+      height: 30px
+      z-index: 100
+      background-color: transparent
+      background-size: 10px
+      background-repeat: no-repeat
+      background-position: center
+      cursor: pointer
+      &--prev
+        background-image: url('../img/button-prev.svg')
+        left: 16px
+      &--next
+        background-image: url('../img/button-next.svg')
+        right: 16px
+    &__item
+      width: 100%
+      height: 100%
+      border-radius: 8px
+      position: relative
+      overflow: hidden
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+        z-index: 50
 .stars
   flex-basis: 100%
 .offer
@@ -57,43 +96,6 @@
     font-size: 14px
     line-height: 18px
     color: $light
-.swiper-container
-  width: 100%
-  height: 100%
-  border-radius: 8px
-  position: relative
-  &::after
-    content: ''
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
-    z-index: 50
-.slider
-  width: 728px
-  height: 450px
-  position: relative
-  &-button
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    width: 30px
-    height: 30px
-    z-index: 100
-    background-color: transparent
-    background-size: 10px
-    background-repeat: no-repeat
-    background-position: center
-    &--prev
-      background-image: url('../img/button-prev.svg')
-      left: 16px
-    &--next
-      background-image: url('../img/button-next.svg')
-      right: 16px
 .booking
   background-color: $background-dark
   color: $light
