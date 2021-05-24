@@ -362,18 +362,18 @@ img {
   .hotel-info__offer {
     margin-left: 0;
     order: -1; }
+  .hotel-right {
+    flex-direction: column; }
+  .hotel__booking {
+    margin-bottom: 30px; }
+  .hotel__slider {
+    margin-bottom: 30px; }
   .hotel-wrapper {
     justify-content: space-between; }
   .stars {
     flex-basis: auto; }
   .rating {
     display: none; }
-  .hotel-right {
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 403px; }
-  .hotel__slider {
-    margin-bottom: 20px; }
   .booking {
     width: 100%; }
   .map {
@@ -384,7 +384,11 @@ img {
   .logo {
     width: 99px; }
   .slider {
-    height: 290px; } }
+    height: 290px; }
+  .hotel__booking {
+    margin-bottom: 20px; }
+  .hotel__slider {
+    margin-bottom: 20px; } }
 
 @media (max-width: 320px) {
   .slider {

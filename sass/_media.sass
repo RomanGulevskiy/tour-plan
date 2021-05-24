@@ -75,19 +75,18 @@
       &__offer
         margin-left: 0
         order: -1
+    &-right
+      flex-direction: column
+    &__booking
+      margin-bottom: 30px
+    &__slider
+      margin-bottom: 30px
     &-wrapper
       justify-content: space-between
   .stars
     flex-basis: auto
   .rating
     display: none
-  .hotel
-    &-right
-      flex-direction: column
-      justify-content: space-between
-      min-height: 403px
-    &__slider
-      margin-bottom: 20px
   .booking
     width: 100%
   .map
@@ -98,6 +97,11 @@
     width: 99px
   .slider
     height: 290px
+  .hotel
+    &__booking
+      margin-bottom: 20px
+    &__slider
+      margin-bottom: 20px
 @media (max-width: 320px)
   .slider
     height: 179px
