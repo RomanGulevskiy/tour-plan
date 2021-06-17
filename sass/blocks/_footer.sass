@@ -1,0 +1,117 @@
+.footer
+  padding-top: 108px
+  padding-bottom: 46px
+  background-color: $background-dark
+  color: $footer-text-color
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, minmax(min-content, 1fr))
+    grid-gap: 20px
+    grid-auto-rows: minmax(49px, min-content)
+    align-items: start
+  &__title
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    color: $light
+    margin: 0 0 16px
+    text-transform: uppercase
+    &--mb-3
+      margin-bottom: 34px
+    &--inline
+      margin: 0 43px 0 0
+  &__ul
+    margin: 0
+    padding: 0
+    list-style: none
+  &__item
+    display: flex
+    align-items: flex-start
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 160%
+    &--mb-2
+      margin-bottom: 20px
+  &__link
+    color: inherit
+    text-decoration: none
+  &__logo
+    width: 166px
+    grid-row: 1 / 3
+    align-self: stretch
+  &__categories
+    grid-row: 1 / 4
+  &__social
+    &-network
+      grid-row: 2 / 4
+      grid-column: span 2
+      display: flex
+      align-items: start
+    &-links
+      display: flex
+      align-items: center
+      justify-content: space-between
+      min-width: 83px
+  &__legal
+    justify-self: end
+  &__contact-details
+    grid-column: span 2
+  &__contact-form
+    grid-column: 3 / span 2
+  &__form
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+  &__input
+    flex-basis: 48%
+    height: 50px
+    padding: 18px 23px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: inherit
+    border: none
+    border-radius: 4px
+    background-color: $light
+    margin-bottom: 15px
+  &__textarea
+    flex-basis: 100%
+    height: 123px
+    padding: 18px 23px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: inherit
+    border: none
+    border-radius: 4px
+    background-color: $light
+    margin-bottom: 22px
+  &__button
+    width: 160px
+    padding: 18px
+    color: $light
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    background-color: $primary
+    border: none
+    border-radius: 4px
+    cursor: pointer
+  &__info
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: inherit
+  &__text
+    margin: 0 0 22px
+  &__icon
+    &-wrapper
+      min-width: 40px
+      text-align: center
