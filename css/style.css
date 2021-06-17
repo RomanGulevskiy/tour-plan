@@ -196,6 +196,7 @@ img {
   width: 728px;
   height: 450px;
   position: relative;
+  margin: 0;
 }
 
 .hotel-slider__button {
