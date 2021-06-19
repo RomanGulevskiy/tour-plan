@@ -28,6 +28,7 @@ img {
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: #FFFFFF;
 }
 
 .header-top__menu-button {
@@ -53,9 +54,18 @@ img {
   list-style-type: none;
 }
 
+.header-menu__item--mobile--visible {
+  display: none;
+}
+
 .header-menu__link {
   color: inherit;
   text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .logo {
@@ -115,6 +125,10 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+.header__search--mobile--visible, .header__user--mobile--visible {
+  display: none;
 }
 
 .breadcrumb-list {
@@ -971,12 +985,60 @@ img {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 78px;
+  }
   .container {
     max-width: 576px;
     width: 92%;
   }
-  .header-menu, .header__search, .header__user {
+  .header--mobile--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .header-nav {
     display: none;
+    position: fixed;
+    top: 78px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .header-nav--visible {
+    display: block;
+  }
+  .header-menu {
+    flex-direction: column;
+    padding-top: 31px;
+  }
+  .header-menu__item {
+    margin-bottom: 20px;
+  }
+  .header-menu__item--mobile--visible {
+    display: block;
+  }
+  .header__search--mobile--hidden, .header__user--mobile--hidden {
+    display: none;
+  }
+  .header__search--mobile--visible, .header__user--mobile--visible {
+    display: flex;
+  }
+  .search {
+    max-width: 245px;
+    margin-bottom: 19px;
+  }
+  .user {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .user__name--light {
+    color: #FFFFFF;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 7px;
   }
   .menu-button {
     width: 16px;
