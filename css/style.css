@@ -18,6 +18,10 @@ img {
   max-width: 100%;
 }
 
+textarea {
+  resize: none;
+}
+
 .header {
   background-color: #FFFFFF;
 }
@@ -862,6 +866,123 @@ img {
   text-align: center;
 }
 
+.modal__overlay {
+  background: rgba(0, 143, 223, 0.39);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__dialogue {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  padding: 33px 88px;
+  border-radius: 8px;
+  width: 478px;
+  background-color: #0A223D;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.modal__dialogue--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__close {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.modal__title {
+  display: block;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.modal__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.modal__input {
+  flex-basis: 100%;
+  height: 50px;
+  padding: 18px 23px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: inherit;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.modal__textarea {
+  flex-basis: 100%;
+  height: 123px;
+  padding: 18px 23px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: inherit;
+  border: none;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.modal__button {
+  width: 160px;
+  padding: 18px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal__info {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1206,6 +1327,11 @@ img {
     grid-row: 7;
     grid-column: 1;
   }
+  .modal__dialogue {
+    width: 98%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -1229,5 +1355,9 @@ img {
     flex-basis: 100%;
     order: 3;
     margin: 15px 0;
+  }
+  .modal__info {
+    font-size: 10px;
+    line-height: 15px;
   }
 }
